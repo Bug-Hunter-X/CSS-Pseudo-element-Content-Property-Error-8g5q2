@@ -1,0 +1,9 @@
+The CSS property `content` is used with the `::before` or `::after` pseudo-elements to insert generated content.  However, if the `content` property is used incorrectly, it might lead to unexpected rendering issues or even errors in the browser's developer console. For instance, inserting invalid characters or escaping issues could break the rendering.
+
+```css
+/* Incorrect usage: missing quotes around a string */
+.element::before { content: This is text; }
+
+/* Correct usage: string with quotes */
+.element::before { content: "This is text"; }
+```
