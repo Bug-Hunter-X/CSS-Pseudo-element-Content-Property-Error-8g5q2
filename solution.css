@@ -1,0 +1,12 @@
+The solution involves ensuring that strings assigned to the `content` property are properly enclosed in quotation marks.  If special characters need to be included, those should be properly escaped.  This avoids parsing issues and ensures the generated content renders as intended.
+
+```css
+/* Correct usage: string with quotes */
+.element::before { content: "This is text"; }
+
+/* Correct usage: url with correct escaping */
+.image::before { content: url("image.png"); }
+
+/* Correct usage: special characters escaped */
+.element::before { content: "This is a \"quoted\" string with special characters!"; }
+```
